@@ -9,5 +9,7 @@ terraform {
     bucket = "devopsb25terraform"
     key = "terraform.tfstate"
     region = "us-east-1"
+    dynamodb_table = "devopsb25-terraform-state-lock-dynamo"
+    encrypt = true
   }
 }
