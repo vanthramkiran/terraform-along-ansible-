@@ -12,5 +12,7 @@ resource "aws_internet_gateway" "default" {
     vpc_id = "${aws_vpc.vpc1.id}"
     tags = {
       Name = "${var.vpc_name}-IGW"
+      Project = local.projectname
+      CostCenter = local.costcenter
     }
 }
